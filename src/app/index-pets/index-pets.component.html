@@ -8,14 +8,14 @@ add list of pets below
     <td>
     <a [routerLink]="['pets',p.id]">
       <img class="thumb"
-             [src]="p.imageSrc" >
+             [src]="p.imageSrc">
       </a>
     </td>
 
     <td>
-      <span class="flower_label">{{p.name}}</span>
-      <span class="flower_label">{{p.age}}</span>
-      <span class="flower_label">{{p.petKind}}</span>
+      <span class="flower_label">Name : {{p.name}}</span> <br>
+      <span class="flower_label">Age : {{p.age}} </span> <br>
+      <span class="flower_label">Pet Kind : {{p.petKind}}</span> <br>
     </td>
 
   </tr>

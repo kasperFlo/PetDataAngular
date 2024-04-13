@@ -7,16 +7,16 @@ export interface href {
   href : string;
 }
 
-export interface ownerJson {
-  id: string;
+export interface OwnerJson {
+  id: number;
   firstName: string;
   lastName: string;
   petCount : number;
-  links : linksJson;
+  _links : linksJson;
 }
 
 export interface CatalogJson {
-  owners : ownerJson[];
+  owners : OwnerJson[];
 }
 
 export interface DataJson {
