@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {Observable} from "rxjs";
+import {Component, OnDestroy} from '@angular/core';
+import {Subscription} from "rxjs";
 import {Owner} from "../owner";
 import {OwnerDataService} from "../owner-data.service";
 
@@ -8,12 +8,17 @@ import {OwnerDataService} from "../owner-data.service";
   templateUrl: './index-owners.component.html',
   styleUrl: './index-owners.component.css'
 })
-export class IndexOwnersComponent {
+export class IndexOwnersComponent implements OnDestroy{
 
-  ownersList: Observable<Owner[]>;
+  ownersList: Owner[] = [];
+  ownerSub: Subscription;
+  displayedColumns: string[] = ['firstName', 'lastName', 'petCount', 'details'];
 
   constructor(ownerDataService: OwnerDataService) {
-    this.ownersList = ownerDataService.getAllOwners();
+    this.ownerSub = ownerDataService.getAllOwners().subscribe(ownersList => this.ownersList = ownersList);
   }
 
+  ngOnDestroy() {
+    this.ownerSub?.unsubscribe();
+  }
 }

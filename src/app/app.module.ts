@@ -16,6 +16,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatMenuModule, } from "@angular/material/menu";
 import {MatButtonModule, } from "@angular/material/button";
 import {HttpClientModule} from "@angular/common/http";
+import {MatTableModule} from "@angular/material/table";
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import {HttpClientModule} from "@angular/common/http";
     HttpClientModule,
     MatIconModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule
   ],
   providers: [
     provideAnimationsAsync()
