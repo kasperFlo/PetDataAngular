@@ -1,0 +1,28 @@
+/* Style for the table */
+table {
+  /*width: 100%;*/
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.ownerTable {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.ownerLabel {
+  /*font-weight: bold;*/
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  text-decoration: underline;
+}

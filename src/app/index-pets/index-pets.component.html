@@ -1,21 +1,18 @@
-<p>index-pets works!</p>
-
-
-add list of pets below
+<h2>list of pets below</h2>
 
 <table>
   <tr *ngFor="let p of (petsList | async)">
     <td>
-    <a [routerLink]="['pets',p.id]">
+      <a [routerLink]="['pet', p.id]">
       <img class="thumb"
              [src]="p.imageSrc">
       </a>
     </td>
 
     <td>
-      <span class="flower_label">Name : {{p.name}}</span> <br>
-      <span class="flower_label">Age : {{p.age}} </span> <br>
-      <span class="flower_label">Pet Kind : {{p.petKind}}</span> <br>
+      <span class="ownerLabel">Name : {{p.name}}</span> <br>
+      <span class="ownerLabel">Age : {{p.age}} </span> <br>
+      <span class="ownerLabel">Pet Kind : {{p.petKind}}</span> <br>
     </td>
 
   </tr>

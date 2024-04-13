@@ -1,1 +1,40 @@
 <p>details-owners works!</p>
+
+<div class = custom-card>
+
+  <ng-container *ngIf=" owner !== undefined ; else not_found">
+
+    <h2 class="ownerLabel">Owner: {{owner.firstName+" "+owner.lastName}} </h2>
+
+    <div class="text_box"> Pet Count : {{owner.petCount}} </div>
+  <table>
+
+    <tr *ngFor="let p of (petsList | async)">
+      <td>
+        <a [routerLink]="['/index/petsList/pet/', p.id]">
+          <img class="thumb"
+               [src]="p.imageSrc">
+        </a>
+      </td>
+
+      <td>
+        <span class="ownerLabel">Name : {{p.name}}</span> <br>
+        <span class="ownerLabel">Age : {{p.age}} </span> <br>
+        <span class="ownerLabel">Pet Kind : {{p.petKind}}</span> <br>
+      </td>
+    </tr>
+  </table>
+
+  </ng-container>
+
+  <ng-template #not_found>
+    <p class="message">
+      The data is not found :(
+    </p>
+  </ng-template>
+
+</div>
+
+<p>
+  <a routerLink="/index">Back to Main Page</a>
+</p>

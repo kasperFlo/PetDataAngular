@@ -1,1 +1,25 @@
 <p>details-pets works!</p>
+
+<ng-container *ngIf=" pet !== undefined ; else not_found">
+
+  <h2 class="ownerLabel">Pet: {{pet.name}}</h2>
+
+  <p> <img [src]='pet.imageSrc' > </p>
+
+  <div class="text_box"> Age : {{pet.age}} </div>
+  <div class="text_box"> Pet Kind : {{pet.petKind}} </div> <br>
+
+  <a routerLink="owner"> View This Pets Owner</a>
+
+
+</ng-container>
+
+<ng-template #not_found>
+  <p class="message">
+    The data is not found :(
+  </p>
+</ng-template>
+
+<p>
+  <a routerLink="/index">Back to Main Page</a>
+</p>

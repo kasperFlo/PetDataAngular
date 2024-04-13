@@ -11,12 +11,15 @@ const routes: Routes = [
   {path: 'index', component: IndexMainComponent},
 
   {path: 'index/petsList', component: IndexPetsComponent},
+  {path: 'index/petsList/pet/:petID', component: DetailsPetsComponent},
+  {path: 'index/petsList/pet/:petID/owner', component: DetailsOwnersComponent},
+
+
   {path: 'index/ownersList', component: IndexOwnersComponent},
+  {path: 'index/ownersList/owner/:ownerID', component: DetailsOwnersComponent},
+  {path: 'index/ownersList/owner/:ownerID/pets', component: DetailsPetsComponent},
 
-  {path: 'pets/:petID', component: DetailsPetsComponent},
-  {path: 'owners/:ownerID', component: DetailsOwnersComponent},
-
-  {path: '**', redirectTo: ''}
+  // {path: '**', redirectTo: ''}
 ];
 
 @NgModule({

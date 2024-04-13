@@ -1,0 +1,36 @@
+/* Center everything on the screen */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the black card */
+.custom-card {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the owner details */
+.ownerLabel {
+  font-size: 24px;
+}
+
+.text_box {
+  margin-top: 10px;
+}
+
+/* Style the pet details */
+table {
+  margin-top: 20px;
+}
+
+.ownerLabel,
+.message {
+  color: #fff;
+}

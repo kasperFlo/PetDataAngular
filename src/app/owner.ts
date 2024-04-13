@@ -5,6 +5,6 @@ export class Owner {
   public petCount : number = 0;
 
   public linkSelf : string = '';
-  public linkPet : string = '';
+  public linkPets : string = '';
   public linkOwner : string = '';
 }

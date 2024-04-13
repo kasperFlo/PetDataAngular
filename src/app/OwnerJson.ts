@@ -1,7 +1,7 @@
 export interface linksJson {
   self : href;
   owner: href;
-  pet: href;
+  pets: href;
 }
 export interface href {
   href : string;
