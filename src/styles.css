@@ -40,6 +40,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   margin: 0.5em;
 }
+.table-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20em;
+}
 
 
 .LargePetImage {
@@ -53,8 +58,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .PetImage {
   width: 100px;
   height: auto;
-  margin-right: 10px;
+  /*margin-right: 10px;*/
   margin-bottom: 5px;
+  margin-top: 5px;
   box-shadow: 4px 4px 8px rgba(255, 0, 0, 0.5);
 }
 
