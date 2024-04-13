@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, OnDestroy} from '@angular/core';
 import {Pet} from "../pet";
-import {Observable} from "rxjs";
+import {Observable, Subscription} from "rxjs";
 import {PetDataService} from "../pet-data.service";
 
 @Component({
@@ -8,12 +8,19 @@ import {PetDataService} from "../pet-data.service";
   templateUrl: './index-pets.component.html',
   styleUrl: './index-pets.component.css'
 })
-export class IndexPetsComponent {
+export class IndexPetsComponent implements OnDestroy {
 
-  petsList: Observable<Pet[]>;
+  petsList: Pet[] = [];
+  petsSub : Subscription | undefined;
+  displayedColumns: string[] = ['image', 'name', 'age', 'petKind'];
 
   constructor(petDataService: PetDataService) {
-    this.petsList = petDataService.getAllPets();
+    this.petsSub = petDataService.getAllPets().subscribe(petsList => this.petsList = petsList);
+  }
+
+  ngOnDestroy() {
+    this.petsSub?.unsubscribe();
   }
 
 }
+

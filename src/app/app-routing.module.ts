@@ -10,12 +10,12 @@ const routes: Routes = [
   {path: '', component: IndexMainComponent},
   {path: 'index', component: IndexMainComponent},
 
-  {path: 'petsList', component: IndexPetsComponent},
+  {path: 'index/petsList', component: IndexPetsComponent},
   {path: 'index/petsList/pet/:petID', component: DetailsPetsComponent},
   {path: 'index/petsList/pet/:petID/owner', component: DetailsOwnersComponent},
 
 
-  {path: 'ownersList', component: IndexOwnersComponent},
+  {path: 'index/ownersList', component: IndexOwnersComponent},
   {path: 'index/ownersList/owner/:ownerID', component: DetailsOwnersComponent},
   {path: 'index/ownersList/owner/:ownerID/pets', component: DetailsPetsComponent},
 
