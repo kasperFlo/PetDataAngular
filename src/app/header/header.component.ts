@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  showSubToolbars = false;
+
+  toggleSubToolbars() {
+    this.showSubToolbars = !this.showSubToolbars;
+  }
 
 }

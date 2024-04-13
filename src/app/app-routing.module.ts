@@ -8,6 +8,7 @@ import {IndexOwnersComponent} from "./index-owners/index-owners.component";
 
 const routes: Routes = [
   {path: '', component: IndexMainComponent},
+  {path: 'index', component: IndexMainComponent},
 
   {path: 'index/petsList', component: IndexPetsComponent},
   {path: 'index/ownersList', component: IndexOwnersComponent},

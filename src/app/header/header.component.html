@@ -1,3 +1,30 @@
+
 <mat-toolbar color="primary">
-  <p>header works!</p>
+  <button mat-icon-button (click)="toggleSubToolbars()" >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Assignment 4 Pets and Owners</span>
 </mat-toolbar>
+
+
+<ng-container *ngIf="showSubToolbars">
+  <mat-toolbar>
+    <mat-toolbar-row>
+<!--      <span>Custom Toolbar 1</span>-->
+      <a routerLink="index">Main Menu Index</a>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-toolbar>
+    <mat-toolbar-row>
+<!--      <span>Custom Toolbar 2</span>-->
+      <a routerLink="index/petsList">Pets List</a>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-toolbar>
+    <mat-toolbar-row>
+<!--      <span>Custom Toolbar 3</span>-->
+      <a routerLink="index/ownersList">Owner List</a>
+
+    </mat-toolbar-row>
+  </mat-toolbar>
+</ng-container>

@@ -12,6 +12,10 @@ import { IndexOwnersComponent } from './index-owners/index-owners.component';
 import { DetailsPetsComponent } from './details-pets/details-pets.component';
 import { DetailsOwnersComponent } from './details-owners/details-owners.component';
 import { FooterComponent } from './footer/footer.component';
+import {MatIconModule} from "@angular/material/icon";
+import {MatMenuModule, } from "@angular/material/menu";
+import {MatButtonModule, } from "@angular/material/button";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -28,7 +32,11 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule,
+    MatIconModule,
+    MatMenuModule,
+    MatButtonModule
   ],
   providers: [
     provideAnimationsAsync()
