@@ -8,18 +8,17 @@ import {IndexOwnersComponent} from "./index-owners/index-owners.component";
 
 const routes: Routes = [
   {path: '', component: IndexMainComponent},
-  {path: 'index', component: IndexMainComponent},
 
-  {path: 'index/petsList', component: IndexPetsComponent},
-  {path: 'index/petsList/pet/:petID', component: DetailsPetsComponent},
-  {path: 'index/petsList/pet/:petID/owner', component: DetailsOwnersComponent},
+  {path: 'petsList', component: IndexPetsComponent},
+  {path: 'petsList/pet/:petID', component: DetailsPetsComponent},
+  {path: 'petsList/pet/:petID/owner', component: DetailsOwnersComponent},
 
 
-  {path: 'index/ownersList', component: IndexOwnersComponent},
-  {path: 'index/ownersList/owner/:ownerID', component: DetailsOwnersComponent},
-  {path: 'index/ownersList/owner/:ownerID/pets', component: DetailsPetsComponent},
+  {path: 'ownersList', component: IndexOwnersComponent},
+  {path: 'ownersList/owner/:ownerID', component: DetailsOwnersComponent},
+  {path: 'ownersList/owner/:ownerID/pets', component: DetailsPetsComponent},
 
-  // {path: '**', redirectTo: ''}
+  {path: '**', redirectTo: ''}
 ];
 
 @NgModule({

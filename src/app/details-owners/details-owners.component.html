@@ -11,7 +11,7 @@
       <table>
         <tr *ngFor="let p of (petsList | async)">
           <td>
-            <a [routerLink]="['/index/petsList/pet/', p.id]">
+            <a [routerLink]="['/petsList/pet/', p.id]">
               <img class="PetImage"
                    [src]="p.imageSrc">
             </a>
@@ -36,5 +36,5 @@
 </body>
 
 <p>
-  <a routerLink="/index">Back to Main Page</a>
+  <a routerLink="/">Back to Main Page</a>
 </p>
