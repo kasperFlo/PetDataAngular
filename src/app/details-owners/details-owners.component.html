@@ -1,9 +1,8 @@
-<p>details-owners works!</p>
+<h2>Details Page - Owner </h2>
 
 <body>
-
   <ng-container *ngIf=" owner !== undefined ; else not_found" >
-    <div class="custom-card">
+    <div class="table-custom-card">
       <div class="ownerInfo">
         <h2 class="ownerLabel">Owner: {{owner.firstName+" "+owner.lastName}} </h2>
         <div class="ownerLabel"> Pet Count : {{owner.petCount}} </div>
@@ -13,7 +12,7 @@
         <tr *ngFor="let p of (petsList | async)">
           <td>
             <a [routerLink]="['/index/petsList/pet/', p.id]">
-              <img class="petImage"
+              <img class="PetImage"
                    [src]="p.imageSrc">
             </a>
           </td>

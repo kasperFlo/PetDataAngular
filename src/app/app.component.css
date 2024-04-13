@@ -4,3 +4,11 @@ main{
   padding-top: 2em;
   padding-bottom: 2em;
 }
+
+.petImage {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  box-shadow: 0 4px 8px 0 rgba(63, 232, 5, 0.65);
+}

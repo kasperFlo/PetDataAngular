@@ -10,35 +10,6 @@ body, html {
   /*background-color: #f0f0f0;*/
 }
 
-.custom-card {
-  width: 20em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: var(--gray-900);
-  color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
-  margin: 0.5em;
-
-}
-
-.petImage {
-  width: 100px;
-  height: auto;
-  margin-right: 10px;
-}
-
-.petLabel {
-  font-size: 18px;
-}
-.petInfo {
-
-}
-
 
 :host {
   --bright-blue: oklch(51.01% 0.274 263.83);

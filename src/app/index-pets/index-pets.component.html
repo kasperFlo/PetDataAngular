@@ -1,14 +1,12 @@
-<h2>list of pets below</h2>
+<h1>Main Index - Pets </h1>
 
-
-      <table>
+<table>
     <body>
-
         <tr *ngFor="let p of (petsList | async)">
-          <div class="custom-card">
+          <div class="pet-custom-card">
             <td>
               <a [routerLink]="['pet', p.id]">
-              <img class="petImage"
+              <img class="PetImage"
                      [src]="p.imageSrc">
               </a>
             </td>
@@ -24,5 +22,5 @@
 
         </tr>
     </body>
-      </table>
+  </table>
 

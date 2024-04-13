@@ -1,24 +1,23 @@
-<p>index-owners works! </p>
-
-add list of owners below
+<h1>Main Index - Owners </h1>
 
 <table>
-  <tr *ngFor="let o of (ownersList | async)">
+  <body>
+    <tr *ngFor="let o of (ownersList | async)">
+      <div class="owner-custom-card">
 
-    <td class = "ownerTable">
-      <span class="ownerLabel">First Name : {{o.firstName}}</span> <br>
-      <span class="ownerLabel">Last Name : {{o.lastName}}</span> <br>
-      <span class="ownerLabel">Pet Count : {{o.petCount}}</span> <br>
+      <td class = "ownerTable">
+        <span class="ownerLabel">First Name : {{o.firstName}}</span> <br>
+        <span class="ownerLabel">Last Name : {{o.lastName}}</span> <br>
+        <span class="ownerLabel">Pet Count : {{o.petCount}}</span> <br>
 
 
-      <a [routerLink]="['owner', o.id]">
-        <span class="ownerLabel"> View Details </span> <br>
-      </a>
-<!--      <a [routerLink]="['owner', o.id]">-->
-<!--        <span class="flower_label"> Link to Pets : {{o.linkPets}}</span> <br>-->
-<!--      </a>-->
+        <a [routerLink]="['owner', o.id]">
+          <span class="ownerLabel"> View Details </span> <br>
+        </a>
 
-    </td>
+      </td>
+      </div>
 
-  </tr>
+    </tr>
+  </body>
 </table>

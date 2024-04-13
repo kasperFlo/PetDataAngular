@@ -1,12 +1,13 @@
-<p>details-pets works!</p>
+<h2>Details Page - Pet </h2>
+
   <body>
-  <div class="custom-card">
+  <div class="table-custom-card">
 
     <ng-container *ngIf=" pet !== undefined ; else not_found">
 
       <h2 class="ownerLabel">Pet: {{pet.name}}</h2>
 
-      <p> <img [src]='pet.imageSrc' > </p>
+      <p> <img [src]='pet.imageSrc' class="LargePetImage"> </p>
 
       <div class="petInfo">
             <div class="text_box"> Age : {{pet.age}} </div>
