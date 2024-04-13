@@ -1,30 +1,31 @@
 <p>details-owners works!</p>
 
-<div class = custom-card>
+<body>
 
-  <ng-container *ngIf=" owner !== undefined ; else not_found">
+  <ng-container *ngIf=" owner !== undefined ; else not_found" >
+    <div class="custom-card">
+      <div class="ownerInfo">
+        <h2 class="ownerLabel">Owner: {{owner.firstName+" "+owner.lastName}} </h2>
+        <div class="ownerLabel"> Pet Count : {{owner.petCount}} </div>
+      </div>
 
-    <h2 class="ownerLabel">Owner: {{owner.firstName+" "+owner.lastName}} </h2>
+      <table>
+        <tr *ngFor="let p of (petsList | async)">
+          <td>
+            <a [routerLink]="['/index/petsList/pet/', p.id]">
+              <img class="petImage"
+                   [src]="p.imageSrc">
+            </a>
+          </td>
 
-    <div class="text_box"> Pet Count : {{owner.petCount}} </div>
-  <table>
-
-    <tr *ngFor="let p of (petsList | async)">
-      <td>
-        <a [routerLink]="['/index/petsList/pet/', p.id]">
-          <img class="thumb"
-               [src]="p.imageSrc">
-        </a>
-      </td>
-
-      <td>
-        <span class="ownerLabel">Name : {{p.name}}</span> <br>
-        <span class="ownerLabel">Age : {{p.age}} </span> <br>
-        <span class="ownerLabel">Pet Kind : {{p.petKind}}</span> <br>
-      </td>
-    </tr>
-  </table>
-
+          <td>
+            <span class="ownerLabel">Name : {{p.name}}</span> <br>
+            <span class="ownerLabel">Age : {{p.age}} </span> <br>
+            <span class="ownerLabel">Pet Kind : {{p.petKind}}</span> <br>
+          </td>
+        </tr>
+      </table>
+    </div>
   </ng-container>
 
   <ng-template #not_found>
@@ -33,7 +34,7 @@
     </p>
   </ng-template>
 
-</div>
+</body>
 
 <p>
   <a routerLink="/index">Back to Main Page</a>
