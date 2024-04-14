@@ -7,9 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   showSubToolbars = false;
+  showSubmenu = false;
 
-  toggleSubToolbars() {
+
+  toggleSubmenu() {
     this.showSubToolbars = !this.showSubToolbars;
+    this.showSubmenu = !this.showSubmenu;
   }
 
 }
